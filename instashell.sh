@@ -5,7 +5,7 @@
 trap 'store;exit 1' 2
 string4=$(openssl rand -hex 32 | cut -c 1-4)
 string8=$(openssl rand -hex 32  | cut -c 1-8)
-string12=$(openssl rand -hex 32 | cut -c 1-12)
+string12=$(openssl rand -he32 | cut -c 1-12)
 string16=$(openssl rand -hex 32 | cut -c 1-16)
 device="android-$string16"
 uuid=$(openssl rand -hex 32 | cut -c 1-32)
